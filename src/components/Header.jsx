@@ -5,11 +5,11 @@ import { FaCode } from 'react-icons/fa';
 
 const Header = () => {
     return (
-        <Navbar bg="dark" variant="dark" expand="lg" sticky="top" className="shadow-sm py-3">
+        <Navbar expand="lg" sticky="top" className="py-3">
             <Container>
                 <Navbar.Brand as={Link} to="/" className="fw-bold d-flex align-items-center">
                     <FaCode className="me-2 text-primary" size={24} />
-                    <span className="text-white">FresherDev</span>
+                    <span className="text-dark fw-bold">my <span className="text-gradient">portfolio</span></span>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">

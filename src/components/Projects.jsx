@@ -31,16 +31,16 @@ const Projects = () => {
     ];
 
     return (
-        <section id="projects" className="py-5 bg-light">
+        <section id="projects" className="py-5">
             <Container>
                 <div className="text-center mb-5">
-                    <h2 className="display-4 fw-bold text-dark">My Projects</h2>
+                    <h2 className="display-4 fw-bold text-dark">My <span className="text-gradient">Projects</span></h2>
                     <p className="lead text-muted">Here are some of the projects I've built recently.</p>
                 </div>
                 <Row className="g-4">
                     {projects.map((project, index) => (
                         <Col lg={4} md={6} key={index}>
-                            <Card className="h-100 shadow-sm border-0 hover-lift transition-all">
+                            <Card className="h-100 glass-card border-0 hover-lift transition-all">
                                 <Card.Img variant="top" src={project.image} alt={project.title} className="rounded-top-lg object-fit-cover" style={{ height: '200px' }} />
                                 <Card.Body className="d-flex flex-column">
                                     <div className="mb-2">

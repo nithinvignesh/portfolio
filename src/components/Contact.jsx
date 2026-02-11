@@ -12,12 +12,12 @@ const Contact = () => {
     };
 
     return (
-        <section id="contact" className="py-5 bg-white text-center">
+        <section id="contact" className="py-5 text-center">
             <Container>
-                <h2 className="display-4 fw-bold mb-5 text-dark">Get In Touch</h2>
+                <h2 className="display-4 fw-bold mb-5 text-dark">Get In <span className="text-gradient">Touch</span></h2>
                 <Row className="justify-content-center">
                     <Col lg={8} md={10}>
-                        <div className="bg-white p-5 rounded-4 shadow-lg border">
+                        <div className="glass-card p-5 rounded-4 shadow-lg border">
                             <h3 className="h4 fw-bold mb-4">Send Me a Message</h3>
                             {status === 'success' && <Alert variant="success" className="mb-4">Message sent successfully!</Alert>}
                             <Form onSubmit={handleSubmit}>
@@ -51,7 +51,7 @@ const Contact = () => {
                                     <a href="#" className="text-secondary hover-text-primary transition-all p-2 rounded-circle bg-light shadow-sm">
                                         <FaGithub size={24} />
                                     </a>
-                                    
+
                                 </div>
                             </div>
                         </div>

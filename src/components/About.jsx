@@ -1,14 +1,14 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import { FaGraduationCap, FaBriefcase, FaCode } from 'react-icons/fa';
+import { FaGraduationCap, FaBriefcase, FaCode, FaCheckCircle } from 'react-icons/fa';
 
 const About = () => {
     return (
-        <Container id="about" className="py-5 bg-light" fluid>
+        <Container id="about" className="py-5 position-relative" fluid>
             <Container>
                 <Row className="text-center mb-5">
                     <Col>
-                        <h2 className="display-4 fw-bold text-dark">About Me</h2>
+                        <h2 className="display-4 fw-bold text-dark">About <span className="text-gradient">Me</span></h2>
                         <p className="lead text-secondary">A little bit about my journey</p>
                     </Col>
                 </Row>
@@ -16,20 +16,35 @@ const About = () => {
                 <Row className="justify-content-center align-items-center mb-5 gx-5">
                     <Col lg={5} md={10} className="mb-4 mb-lg-0">
                         <img
-                            src="https://via.placeholder.com/600x400?text=Workspace+Image"
-                            alt="Workspace"
+                            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop"
+                            alt="Coding Workspace"
                             className="img-fluid rounded-4 shadow-lg hover-scale"
                             style={{ transition: 'transform 0.3s ease' }}
                         />
                     </Col>
                     <Col lg={7} md={10}>
                         <h3 className="h2 fw-bold mb-3 text-primary">Web Developer</h3>
-                        <p className="fs-5 text-dark mb-4 lh-lg">
-                            I am a recent   B.E Electronics and communication engineering graduate with a strong foundation in <span className="text-primary fw-bold">React.js, Node.js, and MongoDB</span>. Although I am a fresher, I have built several projects that demonstrate my ability to solve complex problems and deliver clean, efficient code. My goal is to leverage my skills in full-stack development to create impactful digital experiences.
-                        </p>
+                        <ul className="list-unstyled fs-5 text-dark mb-4 lh-lg d-flex flex-column gap-3">
+                            <li className="d-flex align-items-start">
+                                <FaCheckCircle className="text-primary me-3 mt-1 flex-shrink-0" />
+                                <span>Recent <strong>B.E. Electronics and Communication Engineering</strong> graduate.</span>
+                            </li>
+                            <li className="d-flex align-items-start">
+                                <FaCheckCircle className="text-primary me-3 mt-1 flex-shrink-0" />
+                                <span>Strong foundation in <span className="text-primary fw-bold">React.js, Node.js, and MongoDB</span>.</span>
+                            </li>
+                            <li className="d-flex align-items-start">
+                                <FaCheckCircle className="text-primary me-3 mt-1 flex-shrink-0" />
+                                <span>Built diverse projects showcasing clean code and problem-solving skills.</span>
+                            </li>
+                            <li className="d-flex align-items-start">
+                                <FaCheckCircle className="text-primary me-3 mt-1 flex-shrink-0" />
+                                <span>Passionate about creating impactful digital experiences through full-stack development.</span>
+                            </li>
+                        </ul>
                         <Row className="g-4">
                             <Col md={6}>
-                                <div className="d-flex align-items-center p-3 bg-white rounded-3 shadow-sm border-start border-4 border-primary h-100">
+                                <div className="d-flex align-items-center p-3 glass-card rounded-3 h-100 border-start border-4 border-primary">
                                     <FaGraduationCap className="text-primary me-3" size={32} />
                                     <div>
                                         <h5 className="mb-1 text-dark fw-bold">Education</h5>
@@ -38,7 +53,7 @@ const About = () => {
                                 </div>
                             </Col>
                             <Col md={6}>
-                                <div className="d-flex align-items-center p-3 bg-white rounded-3 shadow-sm border-start border-4 border-success h-100">
+                                <div className="d-flex align-items-center p-3 glass-card rounded-3 h-100 border-start border-4 border-success">
                                     <FaCode className="text-success me-3" size={32} />
                                     <div>
                                         <h5 className="mb-1 text-dark fw-bold">Skills</h5>
@@ -47,7 +62,7 @@ const About = () => {
                                 </div>
                             </Col>
                             <Col md={6}>
-                                <div className="d-flex align-items-center p-3 bg-white rounded-3 shadow-sm border-start border-4 border-info h-100">
+                                <div className="d-flex align-items-center p-3 glass-card rounded-3 h-100 border-start border-4 border-info">
                                     <FaBriefcase className="text-info me-3" size={32} />
                                     <div>
                                         <h5 className="mb-1 text-dark fw-bold">Experience</h5>
