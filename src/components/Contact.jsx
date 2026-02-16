@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button, Alert } from 'react-bootstrap';
-import { FaLinkedinIn, FaGithub, FaEnvelope } from 'react-icons/fa';
+import { FaLinkedinIn, FaGithub} from 'react-icons/fa';
 
 const Contact = () => {
     const [status, setStatus] = useState('');
@@ -48,7 +48,7 @@ const Contact = () => {
                                     <a href="#" className="text-secondary hover-text-primary transition-all p-2 rounded-circle bg-light shadow-sm">
                                         <FaLinkedinIn size={24} />
                                     </a>
-                                    <a href="#" className="text-secondary hover-text-primary transition-all p-2 rounded-circle bg-light shadow-sm">
+                                    <a href="https://github.com/nithinvignesh" className="text-secondary hover-text-primary transition-all p-2 rounded-circle bg-light shadow-sm">
                                         <FaGithub size={24} />
                                     </a>
 

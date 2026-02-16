@@ -1,31 +1,50 @@
 import React from 'react';
-import { Container, Row, Col, ProgressBar } from 'react-bootstrap';
-import { FaReact, FaNodeJs, FaBootstrap, FaHtml5, FaCss3Alt, FaDatabase, FaGitAlt } from 'react-icons/fa';
+import { Container, Row, Col } from 'react-bootstrap';
+import { FaCheckCircle, FaLaptopCode, FaServer, FaTools } from 'react-icons/fa';
 
 const Skills = () => {
-    const skills = [
-        { name: 'HTML5', level: 70, icon: <FaHtml5 className="text-danger" size={32} /> },
-        { name: 'CSS3', level: 60, icon: <FaCss3Alt className="text-primary" size={32} /> },
-        { name: 'JavaScript', level: 60, icon: <FaNodeJs className="text-warning" size={32} /> },
-        { name: 'React.js', level: 75, icon: <FaReact className="text-info" size={32} /> },
-        { name: 'Node.js', level: 60, icon: <FaNodeJs className="text-success" size={32} /> },
-        { name: 'Express.js', level: 60, icon: <FaNodeJs className="text-secondary" size={32} /> },
-        { name: 'MongoDB', level: 60, icon: <FaDatabase className="text-success" size={32} /> },
+    const skillCategories = [
+        {
+            title: 'Frontend Development',
+            icon: <FaLaptopCode className="text-primary me-2" />,
+            skills: ['HTML5 & CSS3', 'JavaScript (ES6+)', 'React.js', 'Bootstrap 5']
+        },
+        {
+            title: 'Backend Development',
+            icon: <FaServer className="text-success me-2" />,
+            skills: ['Node.js', 'Express.js', 'RESTful APIs', 'JWT Authentication']
+        },
+        {
+            title: 'Database & Tools',
+            icon: <FaTools className="text-info me-2" />,
+            skills: ['MongoDB', 'Mongoose', 'Git & GitHub']
+        }
     ];
 
     return (
-        <section id="skills" className="py-5 text-center">
+        <section id="skills" className="py-5 bg-white">
             <Container>
-                <h2 className="display-4 mb-5 fw-bold text-dark">Technical <span className="text-gradient">Skills</span></h2>
+                <div className="text-center mb-5">
+                    <h2 className="fw-bold text-uppercase">Technical Skills</h2>
+                    <div className="mx-auto bg-primary mb-3" style={{ width: '50px', height: '3px' }}></div>
+                    <p className="text-secondary">The core technologies I focus on as a MERN Stack Developer.</p>
+                </div>
+
                 <Row className="justify-content-center">
-                    {skills.map((skill, index) => (
-                        <Col md={6} lg={4} key={index} className="mb-4">
-                            <div className="p-4 rounded-4 glass-card h-100 d-flex flex-column justify-content-center hover-lift">
-                                <div className="mb-3">
-                                    {skill.icon}
-                                </div>
-                                <h5 className="mb-2 fw-bold text-dark">{skill.name}</h5>
-                                <ProgressBar now={skill.level} label={`${skill.level}%`} variant="info" stripes animated style={{ height: '20px' }} />
+                    {skillCategories.map((category, index) => (
+                        <Col key={index} lg={4} md={6} className="mb-4">
+                            <div className="p-4 border shadow-sm rounded-3 h-100 bg-light">
+                                <h4 className="fw-bold mb-4 d-flex align-items-center">
+                                    {category.icon} {category.title}
+                                </h4>
+                                <ul className="list-unstyled d-flex flex-column gap-3">
+                                    {category.skills.map((skill, idx) => (
+                                        <li key={idx} className="d-flex align-items-center text-dark">
+                                            <FaCheckCircle className="text-primary me-2 flex-shrink-0" />
+                                            <span>{skill}</span>
+                                        </li>
+                                    ))}
+                                </ul>
                             </div>
                         </Col>
                     ))}
